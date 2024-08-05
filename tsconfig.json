@@ -23,7 +23,7 @@
     "templates/HomePage",
     "templates/PrivacyPolicyPage/index.jsx",
     "templates/PrivacyPolicyPage/index.jsx",
-    "next.config.js"
+    "next-sitemap.config.js"
   ],
   "exclude": ["node_modules"]
 }
