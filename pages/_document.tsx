@@ -9,7 +9,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{/* <link rel="shortcut icon" href="/favicon.png" /> */}</Head>
+        <Head>
+          <link rel="shortcut icon" href="/favicon.png" />
+        </Head>
         <body>
           <Main />
           <NextScript />
@@ -26,7 +28,8 @@ MyDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: any) => (props) => <App emotionCache={cache} {...props} />,
+      enhanceApp: (App: any) => (props) =>
+        <App emotionCache={cache} {...props} />,
     });
 
   const initialProps = await Document.getInitialProps(ctx);
@@ -41,6 +44,9 @@ MyDocument.getInitialProps = async (ctx) => {
 
   return {
     ...initialProps,
-    styles: [...React.Children.toArray(initialProps.styles), ...emotionStyleTags],
+    styles: [
+      ...React.Children.toArray(initialProps.styles),
+      ...emotionStyleTags,
+    ],
   };
 };
