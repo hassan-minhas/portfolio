@@ -71,6 +71,10 @@ const Title = styled(Typography)(({ theme }) => ({
   },
 }));
 
+const BulltetIcon = styled(FiberManualRecordIcon)(({ theme }) => ({
+  margin: "3px 0px 0 0",
+}));
+
 const Makula = () => {
   const FEATURES = [
     "Functionality that allowed users to upload large 3D model files using the multipart upload feature of AWS services. This approach ensured efficient handling of large files by splitting them into smaller, manageable parts during the upload process. For displaying these models, I utilized the Threedy library, which provided robust tools for rendering and interacting with 3D models within the application.",
@@ -108,11 +112,7 @@ const Makula = () => {
       <Heading sx={{ marginTop: "30px" }}>Features I worked on</Heading>
       {FEATURES.map((feature) => (
         <ListItemBox>
-          <FiberManualRecordIcon
-            color="inherit"
-            fontSize="inherit"
-            sx={{ margin: "2px 5px 0 0" }}
-          />
+          <BulltetIcon color="inherit" fontSize="inherit" />
           <ListItemText>{feature}</ListItemText>
         </ListItemBox>
       ))}
