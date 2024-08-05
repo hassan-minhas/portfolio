@@ -41,6 +41,12 @@ const ListItemText = styled(Typography)(({ theme }) => ({
 const ListItemBox = styled(Box)(({ theme }) => ({
   marginBottom: "8px",
   display: "flex",
+
+  fontSize: "12px",
+
+  [theme.breakpoints.down("md")]: {
+    // fontSize: "px",
+  },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
@@ -104,8 +110,8 @@ const Makula = () => {
         <ListItemBox>
           <FiberManualRecordIcon
             color="inherit"
-            fontSize="small"
-            sx={{ margin: "0 5px 0 0" }}
+            fontSize="inherit"
+            sx={{ margin: "2px 5px 0 0" }}
           />
           <ListItemText>{feature}</ListItemText>
         </ListItemBox>
