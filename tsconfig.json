@@ -16,6 +16,14 @@
     "incremental": true,
     "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "templates/HomePage", "templates/PrivacyPolicyPage/index.jsx", "templates/PrivacyPolicyPage/index.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "templates/HomePage",
+    "templates/PrivacyPolicyPage/index.jsx",
+    "templates/PrivacyPolicyPage/index.jsx",
+    "next.config.js"
+  ],
   "exclude": ["node_modules"]
 }
