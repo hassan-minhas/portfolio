@@ -2,16 +2,8 @@ import React from "react";
 import { Typography, Box, List, ListItem } from "@mui/material";
 import { styled } from "@mui/system";
 
-const Section = styled(Box)({
-  marginBottom: "0.5em",
-});
-
 const SubSection = styled(Box)({
   marginBottom: "30px",
-});
-
-const StyledList = styled(List)({
-  paddingLeft: "0.5em",
 });
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -112,11 +104,11 @@ const FastNucesExperience = () => {
         </SubSection>
       ))}
 
-      <Typography variant="body1" paragraph>
+      <Description>
         This experience enhanced my ability to communicate complex technical
         information in an accessible and engaging manner, develop educational
         materials, and bring up a positive and productive learning environment.
-      </Typography>
+      </Description>
     </Box>
   );
 };
