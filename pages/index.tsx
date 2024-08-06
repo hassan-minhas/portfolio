@@ -1,6 +1,9 @@
 import { Box, Divider, styled, Typography } from "@mui/material";
 import { Fragment } from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const Wrapper = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -45,6 +48,16 @@ const Description = styled(Typography)(({ theme }) => ({
 const MuiDivider = styled(Divider)(({ theme }) => ({
   width: "100%",
   marginBottom: "20px",
+}));
+
+const LinkText = styled(Typography)(({ theme }) => ({
+  fontWeight: 500,
+  fontSize: "16px",
+  color: theme.palette.common.link,
+
+  [theme.breakpoints.down("md")]: {
+    fontSize: "12px",
+  },
 }));
 
 const Home = () => {
@@ -93,24 +106,27 @@ const Home = () => {
         <LocationOnIcon
           color="inherit"
           fontSize="inherit"
-          sx={{ margin: "0 3px -3px -5px" }}
+          sx={{ margin: "0 3px -3px -3px" }}
         />
         <span>Lahore, Pakistan</span>
       </Description>
       <Description sx={{ marginBottom: "10px" }}>
-        Contact: +923316675018
+        <PhoneIcon fontSize="inherit" sx={{ margin: "0 3px -3px 0" }} />{" "}
+        +923316675018
       </Description>
       <Description sx={{ marginBottom: "10px" }}>
-        Email: hsnminhas@gmail.com
+        <EmailIcon fontSize="inherit" sx={{ margin: "0 3px -3px 0" }} />
+        hsnminhas@gmail.com
       </Description>
-      <Description>
+      <LinkText>
+        <LinkedInIcon fontSize="inherit" sx={{ margin: "0 3px -3px 0" }} />
         <a
           target="_blank"
           href="https://www.linkedin.com/in/muhammad-hassan-minhas"
         >
           Linkedin
         </a>
-      </Description>
+      </LinkText>
     </Wrapper>
   );
 };
